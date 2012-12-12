@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<script type="text/javascript">
+function limitText(limitField, limitNum) {
+	if (limitField.value.length > limitNum) {
+		limitField.value = limitField.value.substring(0, limitNum);
+	}
+}
+</script>
+
+<link rel="stylesheet" href="/dandelion/css/main.css">
+<link rel="shortcut icon" href="/dandelion/images/favicon.ico" type="image/x-icon">
+<script type="text/javascript" src="/dandelion/js/application.js"></script>
+
+
+	<title>Welcome to the Cinnamon AdminTool</title>
+
+</head>
+<body>
+
+<div class="logo">
+	<img src="/dandelion/images/cinnamon-screen.jpg" alt="Cinnamon">
+</div>
+
+<h1 style="margin-left:20px;">Welcome to the Cinnamon AdminTool</h1>
+<!-- <a href="/dandelion/security/index">SecurityHome</a> -->
+
+
+
+<p style="margin-left:20px;width:80%">Choose a task:</p>
+<div class="dialog" style="margin-left:20px;width:60%;">
+	
+	<h2>Manage Tables</h2>
+	<ul>
+		<li class="controller"><a href="/dandelion/acl/index">ACLs</a></li>
+		
+			<li class="controller"><a href="/dandelion/format/index">Formats</a></li>
+		
+		<li class="controller"><a href="/dandelion/folderType/list">Folder Types </a> 
+		<li class="controller"><a href="/dandelion/group/list">Groups</a></li>
+		<li class="controller"><a href="/dandelion/language/list">Languages</a></li>
+		<li class="controller"><a href="/dandelion/message/list">Message-ids and Translation</a></li>
+
+		
+			<li class="controller"><a href="/dandelion/objectType/index">Object Types</a></li>
+		
+
+		
+			<li class="controller"><a href="/dandelion/relationType/index">Relation Types</a></li>
+		
+
+		<li class="controller"><a href="/dandelion/user/list">Users</a></li>
+		<li class="controller"><a href="/dandelion/aclEntry/index">Permissions</a></li>
+		<li class="controller"><a href="/dandelion/indexType/index">Index Types</a></li>
+		<li class="controller"><a href="/dandelion/indexItem/index">Index Items</a></li>
+		<li class="controller"><a href="/dandelion/indexGroup/index">Index Groups</a></li>
+		<li class="controller"><a href="/dandelion/uiLanguage/list">User Interface Languages</a></li>
+		<li class="controller"><a href="/dandelion/health/index">Health check</a></li>
+	</ul>
+<!--
+	
+		<h2>Data Backup</h2>
+            <ul>
+ 	          	<li class="controller"><a href="/dandelion/dbBackup/createBackup">Backup/Export Data</a></li>
+	 	        <li class="controller"><a href="/dandelion/dbRestore/show">Restore Data From Backup</a></li>
+		
+		</ul>
+		<h2>Cinnamon Server commands</h2>
+		<ul>
+			<li class="controller"><a href="/dandelion/server/connect">connect</a></li>
+		</ul>
+	
+-->
+	
+	<h2>WebClient</h2>
+	<ul>
+		<li class="controller">
+			<a href="/dandelion/folder/list">
+				Browse repository
+			</a>
+		</li>
+	</ul>
+
+
+</div>
+
+
+<hr class="bottom_line clear">
+<p>
+	
+		<a href="/dandelion/logout/index">Logout from cmn_test</a>
+	
+	
+</p>
+
+
+</body></html>

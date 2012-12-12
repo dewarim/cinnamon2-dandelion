@@ -1,0 +1,132 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<script type="text/javascript">
+function limitText(limitField, limitNum) {
+	if (limitField.value.length > limitNum) {
+		limitField.value = limitField.value.substring(0, limitNum);
+	}
+}
+</script>
+
+<link rel="stylesheet" href="/dandelion/css/main.css">
+<link rel="shortcut icon" href="/dandelion/images/favicon.ico" type="image/x-icon">
+<script type="text/javascript" src="/dandelion/js/application.js"></script>
+
+<title>Login</title>
+
+	<style type='text/css' media='screen'>
+#login {
+	margin:15px 0px; padding:0px;
+	text-align:center;
+}
+#login .inner {
+	width:260px;
+	margin:0px auto;
+	text-align:left;
+	padding:10px;
+	border-top:1px dashed #499ede;
+	border-bottom:1px dashed #499ede;
+	background-color:#EEF;
+}
+#login .inner .fheader {
+	padding:4px;margin:3px 0px 3px 0;color:#2e3741;font-size:14px;font-weight:bold;
+}
+#login .inner .cssform p {
+	clear: left;
+	margin: 0;
+	padding: 5px 0 8px 0;
+	padding-left: 105px;
+	border-top: 1px dashed gray;
+	margin-bottom: 10px;
+	height: 1%;
+}
+#login .inner .cssform input[type='text'] {
+	width: 120px;
+}
+#login .inner .cssform label {
+	font-weight: bold;
+	float: left;
+	margin-left: -105px;
+	width: 100px;
+}
+#login .inner .login_message {color:red;}
+#login .inner .text_ {width:120px;}
+#login .inner .chk {height:12px;}
+</style>
+
+
+	<script type="text/javascript">
+		function showForm() {
+			document.getElementById('loginForm').style.display = 'block';
+			document.getElementById('username').focus();
+		}
+	</script>
+
+</head>
+
+<body onLoad="showForm();">
+			<div class="login_logo" style="text-align:center; margin-top:2ex;">
+				<img src="/dandelion/images/cinnamon-screen.jpg" alt="Cinnamon">
+			</div>
+	<div id='login'>
+		<div class='inner'>
+
+			<h1>Login</h1>
+
+			
+			<noscript>
+				Please enable JavaScript in your browser.
+			</noscript>
+
+			<form action='/dandelion/j_spring_security_check' method='POST' id='loginForm' class='cssform' style="display:none;">
+					<input type="hidden" name="submitForm" value="1"/>
+
+				<p>
+				<label for="environment">Repository</label>
+				<select name="environment" id="environment" >
+<option value="1" >cmn_test</option>
+<option value="2" >demo</option>
+</select>
+				</p>
+				
+				<p>
+					<label for='username'>User Name </label>
+					<input type='text' class='text_' name='j_username' id='username' />
+
+				</p>
+				<p>
+					<label for='password'>Password </label>
+					<input type='password' class='text_' name='j_password' id='password' />
+				</p>
+				<p>
+					<label for='remember_me'>Remember me</label>
+					<input type='checkbox' class='chk' name='_spring_security_remember_me' id='remember_me'
+					 />
+				</p>
+				<p>
+					<input type='submit' value='login' />
+				</p>
+			</form>
+		</div>
+		
+		<div class="links">
+			<p>
+				<a href="http://cinnamon-cms.de">Cinnamon Homepage </a> |
+				<a href="http://www.gnu.org/licenses/lgpl-2.1.html">License: LGPL 2.1 </a>
+			</p>
+		</div>
+		
+		
+	</div>
+<script type='text/javascript'>
+<!--
+(function(){
+	document.forms['loginForm'].elements['j_username'].focus();
+})();
+// -->
+</script>
+</body>
+</html>

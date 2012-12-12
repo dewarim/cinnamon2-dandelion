@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite time="48.347" tests="35" name="WebTest" failures="0" errors="0">
+<!--
+			This is an overview of the WebTest results in JUnit "standard" format.
+			It doesn't present all the information available in WebTest reports but can be easily be integrated
+			in reports of continuous integration tools like Cruise Control.
+			-->
+<testcase time="5.39" name="eu.hornerproject.dandelion.webtest.IndexGroupWebTests.testCreateDelete" classname="WebTest"/>
+<testcase time="0.502" name="eu.hornerproject.dandelion.webtest.IndexGroupWebTests.testNoName" classname="WebTest"/>
+<testcase time="0.821" name="eu.hornerproject.dandelion.webtest.IndexGroupWebTests.testDuplicateNameFail" classname="WebTest"/>
+<testcase time="0.876" name="eu.hornerproject.dandelion.webtest.IndexGroupWebTests.testNoDeleteInEditView" classname="WebTest"/>
+<testcase time="4.969" name="eu.hornerproject.dandelion.webtest.IndexItemWebTests.testCreateDelete" classname="WebTest"/>
+<testcase time="2.595" name="eu.hornerproject.dandelion.webtest.IndexItemWebTests.testDuplicateNameFail" classname="WebTest"/>
+<testcase time="1.362" name="eu.hornerproject.dandelion.webtest.IndexItemWebTests.testNoDeleteInEditView" classname="WebTest"/>
+<testcase time="3.115" name="eu.hornerproject.dandelion.webtest.IndexTypeWebTests.testCreateDelete" classname="WebTest"/>
+<testcase time="0.807" name="eu.hornerproject.dandelion.webtest.IndexTypeWebTests.testDuplicateNameFail" classname="WebTest"/>
+<testcase time="0.682" name="eu.hornerproject.dandelion.webtest.IndexTypeWebTests.testNoDeleteInEditView" classname="WebTest"/>
+<testcase time="0.364" name="eu.hornerproject.dandelion.webtest.IndexTypeWebTests.testCreateWithoutName" classname="WebTest"/>
+<testcase time="0.394" name="eu.hornerproject.dandelion.webtest.IndexTypeWebTests.testCreateWithoutIndexerClass" classname="WebTest"/>
+<testcase time="0.425" name="eu.hornerproject.dandelion.webtest.IndexTypeWebTests.testCreateWithoutVaProviderClass" classname="WebTest"/>
+<testcase time="0.492" name="eu.hornerproject.dandelion.webtest.IndexTypeWebTests.testCreateWithInvalidIndexerClass" classname="WebTest"/>
+<testcase time="0.382" name="eu.hornerproject.dandelion.webtest.IndexTypeWebTests.testCreateWithInvalidVaProviderClass" classname="WebTest"/>
+<testcase time="1.296" name="eu.hornerproject.dandelion.webtest.IndexTypeWebTests.testDeleteReferencedIndexType" classname="WebTest"/>
+<testcase time="1.893" name="RelationTypeTests.testNoDeleteInEditView" classname="WebTest"/>
+<testcase time="0.645" name="RelationTypeTests.testRelationTypeListNewDelete" classname="WebTest"/>
+<testcase time="1.748" name="ObjectTypeTests.testNoDeleteInEditView" classname="WebTest"/>
+<testcase time="0.67" name="ObjectTypeTests.testObjectTypeListNewDelete" classname="WebTest"/>
+<testcase time="2.346" name="UserTests.testUserListNew" classname="WebTest"/>
+<testcase time="0.449" name="UserTests.testDeactivateUser" classname="WebTest"/>
+<testcase time="0.422" name="UserTests.testMissingDeleteButton" classname="WebTest"/>
+<testcase time="0.41" name="UserTests.testPasswordMissingInListOrShow" classname="WebTest"/>
+<testcase time="1.745" name="AclTests.testNoDeleteInEditView" classname="WebTest"/>
+<testcase time="0.78" name="AclTests.testAclListNewDelete" classname="WebTest"/>
+<testcase time="2.254" name="GroupTests.testNoDeleteInEditView" classname="WebTest"/>
+<testcase time="0.741" name="GroupTests.testGroupListNewDelete" classname="WebTest"/>
+<testcase time="1.354" name="GroupTests.testAddRemoveUserFromGroup" classname="WebTest"/>
+<testcase time="0.872" name="GroupTests.testAddRemoveGroupFromGroup" classname="WebTest"/>
+<testcase time="1.066" name="GroupTests.testShowAcls" classname="WebTest"/>
+<testcase time="2.005" name="GroupTests.testAddRemoveAclFromGroup" classname="WebTest"/>
+<testcase time="1.952" name="FormatTests.testNoDeleteInEditView" classname="WebTest"/>
+<testcase time="0.678" name="FormatTests.testFormatListNewDelete" classname="WebTest"/>
+<testcase time="1.845" name="LanguageTests.testLanguageListNewDelete" classname="WebTest"/>
+</testsuite>

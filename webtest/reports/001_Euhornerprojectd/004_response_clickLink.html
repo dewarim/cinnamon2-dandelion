@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<script type="text/javascript">
+function limitText(limitField, limitNum) {
+	if (limitField.value.length > limitNum) {
+		limitField.value = limitField.value.substring(0, limitNum);
+	}
+}
+</script>
+
+<link rel="stylesheet" href="/dandelion/css/main.css">
+<link rel="shortcut icon" href="/dandelion/images/favicon.ico" type="image/x-icon">
+<script type="text/javascript" src="/dandelion/js/application.js"></script>
+
+	
+        <title>Create Index Group</title>
+    </head>
+    <body>
+        <div class="logo">
+	<img src="/dandelion/images/cinnamon-small.jpg" alt="Cinnamon">
+</div>
+	<div class="nav">
+            <span class="menuButton"><a class="home" href="/dandelion/">Home</a></span>
+            <span class="menuButton"><a href="/dandelion/indexGroup/list" class="list">Index Group List</a></span>
+        </div>
+        <div class="body">
+            <h1>Create Index Group</h1>
+            
+            
+             
+            <form action="/dandelion/indexGroup/save" method="post" >
+                <div class="dialog">
+                    <table>
+                        <tbody>
+                        
+                            <tr class="prop">
+                                <td valign="top" class="name">
+                                    <label for="name">Name</label>
+                                </td>
+                                <td valign="top" class="value ">
+                                    <input type="text" name="name" value="" id="name" />
+                                </td>
+                            </tr>
+                        
+                        </tbody>
+                    </table>
+                </div>
+                <div class="buttons">
+                    <span class="button"><input type="submit" name="create" class="save" value="Create" id="create" /></span>
+                </div>
+            </form>
+        </div>
+<hr class="bottom_line clear">
+<p>
+	
+		<a href="/dandelion/logout/index">Logout from cmn_test</a>
+	
+	
+</p>
+
+
+    </body>
+</html>

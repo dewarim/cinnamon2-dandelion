@@ -1,0 +1,69 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<script type="text/javascript">
+function limitText(limitField, limitNum) {
+	if (limitField.value.length > limitNum) {
+		limitField.value = limitField.value.substring(0, limitNum);
+	}
+}
+</script>
+
+<link rel="stylesheet" href="/dandelion/css/main.css">
+<link rel="shortcut icon" href="/dandelion/images/favicon.ico" type="image/x-icon">
+<script type="text/javascript" src="/dandelion/js/application.js"></script>
+
+	
+        <title>Index Group List</title>
+    </head>
+    <body>
+        <div class="logo">
+	<img src="/dandelion/images/cinnamon-small.jpg" alt="Cinnamon">
+</div>  <div class="nav">
+            <span class="menuButton"><a class="home" href="/dandelion/">Home</a></span>
+            <span class="menuButton"><a href="/dandelion/indexGroup/create" class="create">New Index Group</a></span>
+        </div>
+        <div class="body">
+            <h1>Index Group List</h1>
+            
+            <div class="list">
+                <table>
+                    <thead>
+                        <tr>
+                        
+                            <th class="sortable" ><a href="/dandelion/indexGroup/list?sort=id&amp;order=asc">ID</a></th>
+                        
+                            <th class="sortable" ><a href="/dandelion/indexGroup/list?sort=name&amp;order=asc">Name</a></th>
+                        
+                        </tr>
+                    </thead>
+                    <tbody>
+                    
+                        <tr class="odd">
+                        
+                            <td><a href="/dandelion/indexGroup/show/68">68</a></td>
+                        
+                            <td>_default_index_group</td>
+                        
+                        </tr>
+                    
+                    </tbody>
+                </table>
+            </div>
+            <div class="paginateButtons">
+                
+            </div>
+        </div>
+<hr class="bottom_line clear">
+<p>
+	
+		<a href="/dandelion/logout/index">Logout from cmn_test</a>
+	
+	
+</p>
+
+
+    </body>
+</html>
