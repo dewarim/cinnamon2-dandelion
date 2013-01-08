@@ -35,7 +35,7 @@ grails.project.dependency.resolution = {
     }
 	
 	dependencies {
-//        runtime 'net.sourceforge.jtds:jtds:1.2.5'
+        runtime 'net.sourceforge.jtds:jtds:1.3.0'
         runtime 'postgresql:postgresql:9.1-901.jdbc4'
         runtime([group:'org.hibernate', name:'hibernate-c3p0', version:'3.6.8.Final'])
         
