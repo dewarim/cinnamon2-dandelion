@@ -55,7 +55,7 @@ grails.project.dependency.resolution = {
         compile(':jquery:1.8.3')
         compile(':resources:1.1.6')
         compile(':spring-security-core:1.2.7.3')
-        compile('cinnamon2:humulus:0.7.0')
+        compile('cinnamon2:humulus:0.7.1')
         
     }
 }
