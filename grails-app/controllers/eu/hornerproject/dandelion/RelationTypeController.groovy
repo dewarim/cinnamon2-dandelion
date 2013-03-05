@@ -94,6 +94,7 @@ class RelationTypeController extends BaseController{
             }
             rt.leftResolver = RelationResolver.get(params.left_resolver_id)
             rt.rightResolver = RelationResolver.get(params.right_resolver_id)
+            rt.name = params.name
             rt.save(flush:true)
         }
         catch (Exception e){
