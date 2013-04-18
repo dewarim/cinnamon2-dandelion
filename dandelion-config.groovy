@@ -28,6 +28,31 @@ dataSource_logging {
     }
 }
 
+// dataSource for Audit-Trail:
+dataSource_audit {
+    dbCreate = 'update'
+    configClass = GrailsAnnotationConfiguration.class // use hibernate classes
+    pooled = true
+    driverClassName = "org.postgresql.Driver"
+    url = "jdbc:postgresql://127.0.0.1:5432/cinnamon_audit"
+    dialect = "org.hibernate.dialect.PostgreSQLDialect"
+    username = "cinnamon"
+    password = "cinnamon"
+    properties {
+        initialSize = 10
+        maxActive = 500
+        minEvictableIdleTimeMillis = 300000
+        timeBetweenEvictionRunsMillis = 300000
+        numTestsPerEvictionRun = 5
+        testOnBorrow = true
+        testWhileIdle = true
+        testOnReturn = true
+        validationQuery = "SELECT 1"
+    }
+}
+
+
+
 indexers = [
         'server.index.indexer.DefaultIndexer',
         'server.index.indexer.BooleanXPathIndexer',

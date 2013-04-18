@@ -119,6 +119,8 @@
                 <li class="controller"><g:link controller="health"><g:message code="index.manage.health"/></g:link></li>
                 <li class="controller"><g:link controller="configEntry"><g:message
                         code="index.manage.configEntry"/></g:link></li>
+                <li class="controller"><g:link controller="auditLog">
+                    <g:message code="index.manage.auditLog" default="Audit-Trail"/></g:link></li>
             </ul>
         </div>
 
