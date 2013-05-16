@@ -10,6 +10,8 @@
         <g:sortableColumn property="rightobjectprotected" title="${message(code:'relationType.rightobjectprotected')}"/>
         <g:sortableColumn property="cloneOnLeftCopy" title="${message(code:'relationType.cloneOnLeftCopy')}"/>
         <g:sortableColumn property="cloneOnRightCopy" title="${message(code:'relationType.cloneOnRightCopy')}"/>
+        <g:sortableColumn property="cloneOnLeftVersion" title="${message(code:'relationType.cloneOnLeftVersion')}"/>
+        <g:sortableColumn property="cloneOnRightVersion" title="${message(code:'relationType.cloneOnRightVersion')}"/>
         <g:sortableColumn property="leftResolver" title="${message(code:'relationType.leftResolver')}"/>
         <g:sortableColumn property="rightResolver" title="${message(code:'relationType.rightResolver')}"/>
 
@@ -53,6 +55,22 @@
             </td>
             <td class="center">
                 <g:if test="${relationType.cloneOnRightCopy}">
+                    <img src="<g:resource dir='/images' file='ok.png'/>" alt="<g:message code="input.enabled"/>">
+                </g:if>
+                <g:else>
+                    <img src="<g:resource dir='/images' file='no.png'/>" alt="<g:message code="input.disabled"/>">
+                </g:else>
+            </td>
+            <td class="center">
+                <g:if test="${relationType.cloneOnLeftVersion}">
+                    <img src="<g:resource dir='/images' file='ok.png'/>" alt="<g:message code="input.enabled"/>">
+                </g:if>
+                <g:else>
+                    <img src="<g:resource dir='/images' file='no.png'/>" alt="<g:message code="input.disabled"/>">
+                </g:else>
+            </td>
+            <td class="center">
+                <g:if test="${relationType.cloneOnRightVersion}">
                     <img src="<g:resource dir='/images' file='ok.png'/>" alt="<g:message code="input.enabled"/>">
                 </g:if>
                 <g:else>

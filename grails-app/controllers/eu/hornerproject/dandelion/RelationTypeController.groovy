@@ -13,20 +13,21 @@ class RelationTypeController extends BaseController{
         redirect(action:'list')
     }
     
-    def save() {
+    def save(String name, String description, Long left_resolver_id, Long right_resolver_id) {
         log.debug("relationType::${params}")
         Boolean leftprotected = params.leftobjectprotected?.matches(/true|on/) ?: false
         Boolean rightprotected = params.rightobjectprotected?.matches(/true|on/) ?: false
         Boolean cloneOnLeftCopy = params.cloneOnLeftCopy?.matches(/true|on/) ?: false
+        Boolean cloneOnLeftVersion = params.cloneOnLeftVersion?.matches(/true|on/) ?: false
         Boolean cloneOnRightCopy = params.cloneOnRightCopy?.matches(/true|on/) ?: false
-        RelationResolver leftResolver = RelationResolver.get(params.left_resolver_id)
-        RelationResolver rightResolver = RelationResolver.get(params.right_resolver_id)
-        def name = params.name
-        def description = params.description
+        Boolean cloneOnRightVersion = params.cloneOnRightVersion?.matches(/true|on/) ?: false
+        RelationResolver leftResolver = RelationResolver.get(left_resolver_id)
+        RelationResolver rightResolver = RelationResolver.get(right_resolver_id)
         RelationType relationType = new RelationType(name, description,
                 leftprotected, rightprotected,
                 leftResolver, rightResolver,
-                cloneOnRightCopy, cloneOnLeftCopy
+                cloneOnRightCopy, cloneOnLeftCopy,
+                cloneOnRightVersion, cloneOnLeftVersion
         )
     	try{
     		relationType.save(failOnError:true)
@@ -74,23 +75,22 @@ class RelationTypeController extends BaseController{
 		return redirect(action:'list')
     }
 
-    def update() {
-        RelationType rt = RelationType.get(params.id)
+    protected booleanFields = ['leftobjectprotected', 'rightobjectprotected',
+        'cloneOnLeftCopy', 'cloneOnRightCopy', 'cloneOnLeftVersion', 'cloneOnRightVersion']
+    
+    def update(Long id) {
+        RelationType rt = RelationType.get(id)
         try{
             if(! rt){
                 throw new RuntimeException("error.object.not.found")
             }
-            if (params.leftobjectprotected){
-                rt.leftobjectprotected = params.leftobjectprotected?.matches(/true|on/) ?: false
-            }
-            if (params.rightobjectprotected){
-                rt.rightobjectprotected = params.rightobjectprotected?.matches(/true|on/) ?: false
-            }
-            if (params.cloneOnLeftCopy){
-                rt.cloneOnLeftCopy = params.cloneOnLeftCopy?.matches(/true|on/) ?: false
-            }
-            if (params.cloneOnRightCopy){
-                rt.cloneOnRightCopy = params.cloneOnRightCopy?.matches(/true|on/) ?: false
+            booleanFields.each{name ->
+                if(params.containsKey(name)){
+                    rt."$name" = params.get(name).toString().matches(/true|on/) ?: false
+                }
+                else{
+                    rt."$name" = false
+                }
             }
             rt.leftResolver = RelationResolver.get(params.left_resolver_id)
             rt.rightResolver = RelationResolver.get(params.right_resolver_id)
@@ -99,9 +99,9 @@ class RelationTypeController extends BaseController{
         }
         catch (Exception e){
            	flash.message = e.getLocalizedMessage()
-			return redirect(action:'edit', params:[id:params.id])
+			return redirect(action:'edit', params:[id:id])
         }
-        return redirect(action:'show', params:[id:params.id])
+        return redirect(action:'show', params:[id:id])
     }
 
     def updateList() {
