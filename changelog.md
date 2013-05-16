@@ -5,7 +5,7 @@
 * Updated to Grails 2.2.2
 * Updated to Humulus 0.7.1
 * see cinnamon2-server changelog for more details.
-	
+
 ##2.4.0
 
 + Upgrade to Humulus 0.7.0
@@ -14,12 +14,12 @@
 ##2.3.0
 
 + Fixed: you can now remove sudo-flag from a user account
-+ New: XML in config fields is now properly formatted 
++ New: XML in config fields is now properly formatted
 + Improved: user.show and user.edit: checkboxes now have same order
 + Fixed: NPE in create::changeTriggerType.
 + Fixed: new versions of Grails / Groovy somehow need more explicit Class.forName invocations, else they throw an Exception.
 + Fixed: RelationType.create no longer swaps the copyOn{left,right} flags.
-+ Improved: RelationTypeController uses explicit parameter checks on update 
++ Improved: RelationTypeController uses explicit parameter checks on update
     (instead of allowing arbitrary key-value pairs as parameters)
 + Fixed: wrong parameter name in UiLanguageController which prevented users from creating new UI languages.
 + Fixed: Button in show language form so editing languages works again.
