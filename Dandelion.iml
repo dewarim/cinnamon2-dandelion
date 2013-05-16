@@ -87,8 +87,8 @@
       </library>
     </orderEntry>
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="grails-2.2.1" level="application" />
     <orderEntry type="module" module-name="Dandelion-grailsPlugins" />
+    <orderEntry type="library" name="grails-2.2.2" level="application" />
   </component>
 </module>
 
