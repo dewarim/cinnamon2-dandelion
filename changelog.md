@@ -1,5 +1,11 @@
 # Cinnamon2-Dandelion Changelog
- 
+
+## 2.5.x
+
+* Updated to Grails 2.2.2
+* Updated to Humulus 0.7.1
+* see cinnamon2-server changelog for more details.
+	
 ##2.4.0
 
 + Upgrade to Humulus 0.7.0
