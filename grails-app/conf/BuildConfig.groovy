@@ -1,8 +1,6 @@
-//grails.servlet.version = "3.0" // Change depending on target container compliance (2.5 or 3.0)
-grails.servlet.version = "2.5" // Change depending on target container compliance (2.5 or 3.0)
-
-grails.project.target.level = 1.6
-grails.project.source.level = 1.6
+grails.servlet.version = "3.0" // Change depending on target container compliance (2.5 or 3.0)
+grails.project.target.level = 1.7
+grails.project.source.level = 1.7
 grails.project.war.file = "target/${appName}.war"
 
 grails.project.repos.default = "myRepo"
@@ -55,7 +53,7 @@ grails.project.dependency.resolution = {
         compile(':jquery:1.8.3')
         compile(':resources:1.1.6')
         compile(':spring-security-core:1.2.7.3')
-        compile('cinnamon2:humulus:0.7.1')
+        compile('cinnamon2:humulus:0.7.3')
         
     }
 }
